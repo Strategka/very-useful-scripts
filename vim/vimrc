@@ -1,0 +1,141 @@
+" Basic settings {{{
+    " Disable compatible with vi
+    set nocompatible
+
+    " Syntax highliting
+    syntax enable
+
+    " Configure lines
+    set number
+    set ruler
+
+    " Set encodings 
+    set encoding=utf-8
+    set fileencodings=utf-8,cp1251
+
+    " Tabs and etc
+    set tabstop=4
+    set shiftwidth=4
+    set smarttab
+    set expandtab
+    set smartindent
+
+    " Search
+    set incsearch
+    set smartcase
+
+    " Display incomplete commands
+    set showcmd
+
+    " Swap-file directory
+    set directory=/tmp//
+
+    " Backup-file directory
+    set backupdir=/tmp//
+
+    " Undo-file directory
+    set undodir=/tmp//
+
+    " No beep. Only visualbells
+    set visualbell
+" }}}
+
+" Mappings {{{
+    " Map leader
+    let mapleader = "-"
+    let maplocalleader = ","
+
+    " Help navigation
+    " Jump to topic under the cursor
+    nnoremap <cr> <c-]>
+    " Jump back
+    nnoremap <BS> <c-o>
+
+    " Stop highlighting items from last search
+    nnoremap <leader>nh :nohlsearch<cr>
+
+    " Write buffer
+    nnoremap <c-s> :w<CR>
+    inoremap <c-s> <Esc>:w<CR>
+
+    " Folding
+    nnoremap <space> za
+
+    " Autocomplete suggestion
+    inoremap <c-space> <c-x><c-o>
+
+    " Edit my .vimrc and source it
+    nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+    nnoremap <leader>sv :source $MYVIMRC<cr>
+
+    " Remap H and L
+    nnoremap <leader>H H
+    nnoremap <leader>L L
+
+    " Set cursor to the beggining of the current line
+    nnoremap H I<esc>
+    nnoremap L A<esc>
+
+    " Yank from the cursor to the EOL
+    nnoremap Y y$
+" }}}
+
+" Vim {{{
+augroup type_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" HTML {{{
+augroup type_html
+    autocmd!
+    autocmd BufWritePre,BufRead *.html normal gg=G
+    autocmd BufNewFile,BufRead *.html setlocal nowrap
+    autocmd FileType html setlocal foldmethod=indent
+augroup END
+" }}}
+
+" Python {{{
+augroup type_py
+    autocmd!
+    " Comment line
+    autocmd FileType python nnoremap <buffer> <localleader>c I#<space><esc>
+    " Fold method
+    autocmd FileType python setlocal foldmethod=indent
+    " Snippets {{{
+        " If snippet
+        autocmd FileType python iabbrev <buffer> iff if:<left>
+        " Elif snippet
+        autocmd FileType python iabbrev <buffer> eli elif:<left>
+        " Else snippet
+        autocmd FileType python iabbrev <buffer> ell else:<left>
+        " While snippet
+        autocmd FileType python iabbrev <buffer> whh while:<left>
+        " Return snippet
+        autocmd FileType python iabbrev <buffer> rett return
+    " }}}
+augroup END
+" }}}
+
+" C/C++ {{{
+augroup type_c/cpp
+    autocmd!
+    " Comment line
+    autocmd FileType c,c++ nnoremap <buffer> <localleader>c I//<space><esc>
+    " Fold method
+    autocmd FileType c,c++ setlocal foldmethod=indent
+    " Snippets {{{
+        " If snippet
+        autocmd FileType c,c++ iabbrev <buffer> iff if ()<left>
+        " Else if snippet
+        autocmd FileType c,c++ iabbrev <buffer> eli else if ()<left>
+        " Else snippet
+        autocmd FileType c,c++ iabbrev <buffer> ell else ()<left>
+        " While snippet
+        autocmd FileType c,c++ iabbrev <buffer> whh while()<left>
+        " Return snippet
+        autocmd FileType c,c++ iabbrev <buffer> rett return
+    " }}}
+augroup END
+" }}}

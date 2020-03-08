@@ -1,0 +1,32 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Source aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+# Bash colors
+if [ "$PS1" ]; then
+    PS1="\e[38;5;124m\u@\e[38;5;129m\h:\e[38;5;57m\w\\$ \e[0m"
+fi
+
+# Less
+# No beep
+export LESS="$LESS -R -Q"
