@@ -1,0 +1,4 @@
+alias l='ls -l --classify --group-directories-first --human-readable --color=always'
+alias la='ls -A -l --classify --group-directories-first --human-readable'
+alias sorc='source .bashrc'
+alias edrc='vim .bashrc'
