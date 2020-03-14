@@ -37,7 +37,7 @@
     set undodir=/tmp//
 
     " No beep. Only visualbells
-    set visualbell
+    " set visualbell
 " }}}
 
 " Mappings {{{
