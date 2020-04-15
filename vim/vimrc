@@ -1,5 +1,5 @@
 " Basic settings {{{
-    " Disable compatible with vi
+    " Disable compatible mod with vi
     set nocompatible
 
     " Syntax highliting
@@ -24,9 +24,6 @@
     set incsearch
     set smartcase
 
-    " Display incomplete commands
-    set showcmd
-
     " Swap-file directory
     set directory=/tmp//
 
@@ -38,6 +35,13 @@
 
     " No beep. Only visualbells
     " set visualbell
+
+    " Fuzzy File Search
+    set path+=**
+    set wildmenu
+
+    " Tag jumping (ctags needed)
+    command! MakeTags !ctags -R .
 " }}}
 
 " Mappings {{{
