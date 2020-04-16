@@ -26,12 +26,13 @@
 
     " Swap-file directory
     set directory=/tmp//
-
     " Backup-file directory
     set backupdir=/tmp//
-
     " Undo-file directory
     set undodir=/tmp//
+    
+    " Show command
+    set showcmd
 
     " No beep. Only visualbells
     " set visualbell
@@ -39,9 +40,6 @@
     " Fuzzy File Search
     set path+=**
     set wildmenu
-
-    " Tag jumping (ctags needed)
-    command! MakeTags !ctags -R .
 
     " File browsing
     let g:netrw_banner=0        " disable annoying banner
@@ -64,15 +62,12 @@
     " Stop highlighting items from last search
     nnoremap <leader>nh :nohlsearch<cr>
 
-    " Write buffer
+    " Save file
     nnoremap <c-s> :w<CR>
     inoremap <c-s> <Esc>:w<CR>
 
     " Folding
     nnoremap <space> za
-
-    " Autocomplete suggestion
-    inoremap <c-space> <c-x><c-o>
 
     " Edit my .vimrc and source it
     nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -88,6 +83,12 @@
 
     " Yank from the cursor to the EOL
     nnoremap Y y$
+
+    " Tag jumping (ctags needed)
+    command! MakeTags !ctags -R .
+
+    " Insert html template
+    nnoremap <leader>html :-1read $HOME/.vim/skeleton.html<CR>3jwf>a
 " }}}
 
 " Vim {{{
