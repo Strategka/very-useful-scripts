@@ -18,7 +18,10 @@
     set shiftwidth=4
     set smarttab
     set expandtab
+
+    " Indention
     set smartindent
+    filetype indent on
 
     " Search
     set incsearch
