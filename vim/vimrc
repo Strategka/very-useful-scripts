@@ -7,6 +7,7 @@
 
     " Configure lines
     set number
+    set relativenumber
     set ruler
 
     " Set encodings 
