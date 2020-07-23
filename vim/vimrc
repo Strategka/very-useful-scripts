@@ -93,6 +93,10 @@
 
     " Insert html template
     nnoremap <leader>html :-1read $HOME/.vim/skeleton.html<CR>3jwf>a
+
+    " Convert current word to uppercase in insert mode
+    noremap <c-u> viwUe
+    inoremap <c-u> <esc>viwUei
 " }}}
 
 " Vim {{{
