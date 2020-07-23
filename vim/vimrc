@@ -95,8 +95,11 @@
     nnoremap <leader>html :-1read $HOME/.vim/skeleton.html<CR>3jwf>a
 
     " Convert current word to uppercase in insert mode
-    noremap <c-u> viwUe
+    nnoremap <c-u> viwUe
     inoremap <c-u> <esc>viwUei
+
+    " Put word in quotes
+    nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 " }}}
 
 " Vim {{{
