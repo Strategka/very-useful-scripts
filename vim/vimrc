@@ -97,15 +97,19 @@
     " Tag jumping (ctags needed)
     command! MakeTags !ctags -R .
 
-    " Insert html template
-    nnoremap <leader>html :-1read $HOME/.vim/skeleton.html<CR>3jwf>a
+    " Insert HTML template
+    nnoremap <leader>html :-1read $HOME/.vim/skeleton.html<CR>
 
     " Convert current word to uppercase in insert mode
     nnoremap <c-u> viwUe
     inoremap <c-u> <esc>viwUei
 
-    " Put word in quotes
+    " Put word under cursor in 
+    " double quotes
     nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+    " single quotes
+    nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+
 " }}}
 
 " Vim {{{
