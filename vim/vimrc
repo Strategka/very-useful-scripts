@@ -83,7 +83,7 @@
     nnoremap <leader>ev :vsplit $MYVIMRC<cr>
     nnoremap <leader>sv :source $MYVIMRC<cr>
 
-    " Remap H and L
+    " Move to start or end of line
     nnoremap <leader>H H
     nnoremap <leader>L L
 
