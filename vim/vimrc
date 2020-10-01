@@ -110,6 +110,9 @@
     " single quotes
     nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
+    " Exit insert mode with jk
+    inoremap jk <esc>
+
 " }}}
 
 " Vim {{{
