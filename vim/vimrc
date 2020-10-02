@@ -142,15 +142,17 @@ augroup type_py
     " Fold method
     autocmd FileType python setlocal foldmethod=indent
     " Snippets {{{
-        " If snippet
+        " Func 
+        autocmd FileType python iabbrev <buffer> func def():<cr>pass<up><left><left><left>
+        " If 
         autocmd FileType python iabbrev <buffer> iff if:<left>
-        " Elif snippet
+        " Elif 
         autocmd FileType python iabbrev <buffer> eli elif:<left>
-        " Else snippet
+        " Else 
         autocmd FileType python iabbrev <buffer> ell else:<left>
-        " While snippet
+        " While 
         autocmd FileType python iabbrev <buffer> whh while:<left>
-        " Return snippet
+        " Return 
         autocmd FileType python iabbrev <buffer> rett return
     " }}}
 augroup END
@@ -164,15 +166,15 @@ augroup type_c/cpp
     " Fold method
     autocmd FileType c,c++ setlocal foldmethod=indent
     " Snippets {{{
-        " If snippet
+        " If 
         autocmd FileType c,c++ iabbrev <buffer> iff if ()<left>
-        " Else if snippet
+        " Else if 
         autocmd FileType c,c++ iabbrev <buffer> eli else if ()<left>
-        " Else snippet
+        " Else 
         autocmd FileType c,c++ iabbrev <buffer> ell else ()<left>
-        " While snippet
-        autocmd FileType c,c++ iabbrev <buffer> whh while()<left>
-        " Return snippet
+        " While 
+        autocmd FileType c,c++ iabbrev <buffer> whh while ()<left>
+        " Return 
         autocmd FileType c,c++ iabbrev <buffer> rett return
     " }}}
 augroup END
@@ -186,15 +188,15 @@ augroup type_js
     " Fold method
     autocmd FileType js setlocal foldmethod=indent
     " Snippets {{{
-        " If snippet
+        " If 
         autocmd FileType js iabbrev <buffer> iff if ()<left>
-        " Else if snippet
+        " Else if 
         autocmd FileType js iabbrev <buffer> eli else if ()<left>
-        " Else snippet
+        " Else 
         autocmd FileType js iabbrev <buffer> ell else ()<left>
-        " While snippet
+        " While 
         autocmd FileType js iabbrev <buffer> whh while()<left>
-        " Return snippet
+        " Return 
         autocmd FileType js iabbrev <buffer> rett return
     " }}}
 augroup END
