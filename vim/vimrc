@@ -22,6 +22,9 @@
 
     " Indention
     set smartindent
+
+    " File type
+    filetype on
     filetype indent on
 
     " Search
@@ -171,6 +174,28 @@ augroup type_c/cpp
         autocmd FileType c,c++ iabbrev <buffer> whh while()<left>
         " Return snippet
         autocmd FileType c,c++ iabbrev <buffer> rett return
+    " }}}
+augroup END
+" }}}
+
+" JavaScript {{{
+augroup type_js
+    autocmd!
+    " Comment line
+    autocmd FileType js nnoremap <buffer> <localleader>c I//<space><esc>
+    " Fold method
+    autocmd FileType js setlocal foldmethod=indent
+    " Snippets {{{
+        " If snippet
+        autocmd FileType js iabbrev <buffer> iff if ()<left>
+        " Else if snippet
+        autocmd FileType js iabbrev <buffer> eli else if ()<left>
+        " Else snippet
+        autocmd FileType js iabbrev <buffer> ell else ()<left>
+        " While snippet
+        autocmd FileType js iabbrev <buffer> whh while()<left>
+        " Return snippet
+        autocmd FileType js iabbrev <buffer> rett return
     " }}}
 augroup END
 " }}}
