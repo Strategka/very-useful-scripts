@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Save latest commit's hash on master branch
+# Check if dir is empty (so there is no commits yet)
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+    head=$(git rev-parse HEAD)
+else
+    head=''
+fi
+
+[ ! -d '.githooks' ] && mkdir .githooks
+
+[ $(git branch --show-current) == 'master' ] && echo $head > ".githooks/head"
