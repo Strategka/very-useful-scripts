@@ -12,8 +12,6 @@ then
 fi
 export PATH
 
-# User specific aliases and functions
-
 # Source aliases
 if [ -f ~/.aliases ]; then
     . ~/.aliases
@@ -21,7 +19,7 @@ fi
 
 # Bash colors
 if [ "$PS1" ]; then
-    PS1="\e[38;2;204;0;34m\u:\e[38;2;77;77;255m\w\\$ \e[0m"
+    PS1="\[\e[38;2;204;0;34m\]\u:\[\e[38;2;77;77;255m\]\w\\$ \[\e[0m\]"
 fi
 
 # Less
