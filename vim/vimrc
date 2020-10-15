@@ -143,7 +143,7 @@ augroup type_py
     autocmd FileType python setlocal foldmethod=indent
     " Snippets {{{
         " Func 
-        autocmd FileType python iabbrev <buffer> func def():<cr>pass<up><left><left><left>
+        autocmd FileType python iabbrev <buffer> deff def():<cr>pass<up><left><left><left>
         " If 
         autocmd FileType python iabbrev <buffer> iff if:<left>
         " Elif 
