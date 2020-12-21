@@ -181,23 +181,26 @@ augroup END
 " }}}
 
 " JavaScript {{{
-augroup type_js
+augroup type_javascript
     autocmd!
     " Comment line
-    autocmd FileType js nnoremap <buffer> <localleader>c I//<space><esc>
+    autocmd FileType javascript nnoremap <buffer> <localleader>c I//<space><esc>
+    " Indentation
+    autocmd FileType javascript setlocal tabstop=2
+    autocmd FileType javascript setlocal shiftwidth=2
     " Fold method
-    autocmd FileType js setlocal foldmethod=indent
+    autocmd FileType javascript setlocal foldmethod=indent
     " Snippets {{{
         " If 
-        autocmd FileType js iabbrev <buffer> iff if ()<left>
+        autocmd FileType javascript iabbrev <buffer> iff if ()<left>
         " Else if 
-        autocmd FileType js iabbrev <buffer> eli else if ()<left>
+        autocmd FileType javascript iabbrev <buffer> eli else if ()<left>
         " Else 
-        autocmd FileType js iabbrev <buffer> ell else ()<left>
+        autocmd FileType javascript iabbrev <buffer> ell else ()<left>
         " While 
-        autocmd FileType js iabbrev <buffer> whh while()<left>
+        autocmd FileType javascript iabbrev <buffer> whh while()<left>
         " Return 
-        autocmd FileType js iabbrev <buffer> rett return
+        autocmd FileType javascript iabbrev <buffer> rett return
     " }}}
 augroup END
 " }}}
