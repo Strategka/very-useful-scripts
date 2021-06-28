@@ -1,7 +1,8 @@
 # Very useful scripts
-Personal scripts for daily use.  
-## Copying to local machine
-To copy scripts just use *upgrade.sh* in root of repository.  
+Мои личные скриптики, конфиги и другие наборы буковок.
+## Копирование в домашнюю категорию
+Для удобства копирования, используйте скрипт *upgrade.sh*.  
 ```
 ./upgrade.sh
 ```
+Внутри него заданы пути куда и что будет скопировано.
