@@ -9,6 +9,8 @@ cp tmux/tmux.conf ~/.tmux.conf
 cp vim/vimrc ~/.vimrc
 cp vim/skeleton.html ~/.vim/skeleton.html
 
+cp wget/wgetrc ~/.wgetrc
+
 cp aliases ~/.aliases
 
 echo 'Done'
