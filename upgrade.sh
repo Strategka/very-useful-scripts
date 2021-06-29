@@ -11,6 +11,9 @@ cp vim/skeleton.html ~/.vim/skeleton.html
 
 cp wget/wgetrc ~/.wgetrc
 
+cp smartcd/smartcd_config ~/.smartcd_config
+cp smartcd/templates/* ~/.smartcd/templates/
+
 cp aliases ~/.aliases
 
 echo 'Done'

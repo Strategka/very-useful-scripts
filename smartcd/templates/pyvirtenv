@@ -1,0 +1,17 @@
+# Enter any bash_enter commands below here: (leave this line!)
+# PyVenv enter template 
+# Check if virtual environment exist and create if not
+pyvirtname=".${PWD##*/}"
+if [[ ! -d "`pwd`/$pyvirtname" ]]; then
+    echo "Creating python virtual environment..."
+    python -m venv $pyvirtname
+    echo "Done."
+fi
+
+# Activate virtual environment
+source $pyvirtname/bin/activate
+
+# Enter any bash_leave commands below here: (leave this line!)
+if [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+fi
