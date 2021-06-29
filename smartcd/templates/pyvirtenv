@@ -4,7 +4,7 @@
 pyvirtname=".${PWD##*/}"
 if [[ ! -d "`pwd`/$pyvirtname" ]]; then
     echo "Creating python virtual environment..."
-    python -m venv $pyvirtname
+    python -m venv --system-site-packages --upgrade-deps $pyvirtname
     echo "Done."
 fi
 
