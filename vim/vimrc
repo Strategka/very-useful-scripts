@@ -75,10 +75,6 @@
     " Stop highlighting items from last search
     nnoremap <leader>nh :nohlsearch<cr>
 
-    " Save file
-    nnoremap <c-s> :w<CR>
-    inoremap <c-s> <Esc>:w<CR>
-
     " Folding
     nnoremap <space> za
 
