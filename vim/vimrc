@@ -150,6 +150,8 @@ augroup type_py
         autocmd FileType python iabbrev <buffer> whh while:<left>
         " Return 
         autocmd FileType python iabbrev <buffer> rett return
+        " Class
+        autocmd FileType python iabbrev <buffer> classs class:<cr>pass<up><left>
     " }}}
 augroup END
 " }}}
