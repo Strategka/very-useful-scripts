@@ -79,7 +79,7 @@
     nnoremap <space> za
 
     " Edit my .vimrc and source it
-    nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+    nnoremap <leader>ev :edit $MYVIMRC<cr>
     nnoremap <leader>sv :source $MYVIMRC<cr>
 
     " Move to start or end of line
