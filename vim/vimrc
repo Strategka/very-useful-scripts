@@ -190,7 +190,7 @@ augroup type_javascript
     autocmd FileType javascript setlocal foldmethod=indent
     " Snippets {{{
         " If 
-        autocmd FileType javascript iabbrev <buffer> iff if ()<left>
+        autocmd FileType javascript iabbrev <buffer> iff if () {<cr>}<up><right><right><right>
         " Else if 
         autocmd FileType javascript iabbrev <buffer> eli else if ()<left>
         " Else 
