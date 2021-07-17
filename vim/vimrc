@@ -199,6 +199,8 @@ augroup type_javascript
         autocmd FileType javascript iabbrev <buffer> whh while()<left>
         " Return 
         autocmd FileType javascript iabbrev <buffer> rett return
+        " Function
+        autocmd FileType javascript iabbrev <buffer> funn function() {<cr>}<up><right><right><right><right><right><right><right>
     " }}}
 augroup END
 " }}}
