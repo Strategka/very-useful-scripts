@@ -141,7 +141,7 @@ augroup type_py
         " Func 
         autocmd FileType python iabbrev <buffer> deff def():<cr>pass<up><left><left><left>
         " If 
-        autocmd FileType python iabbrev <buffer> iff if:<left>
+        autocmd FileType python iabbrev <buffer> iff if:<cr>pass<up><left>
         " Elif 
         autocmd FileType python iabbrev <buffer> eli elif:<left>
         " Else 
